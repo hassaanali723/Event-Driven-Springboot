@@ -20,7 +20,9 @@ public class ProcessController {
     @PostMapping("/process")
     public String processCheckout(@RequestParam String customerId, @RequestParam String customerName) {
         checkoutService.checkout(customerId, customerName);
+        System.out.println("Checkout process initiated for customer: " + customerId);
         return "Checkout process initiated for customer: " + customerId;
+
     }
 }
 
